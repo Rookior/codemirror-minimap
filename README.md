@@ -12,3 +12,13 @@ codemirror-minimap实际上是为CodeMirror添加了一个Option（minimap）
     window['CodeMirror'] = CodeMirror;
 
 打包后的文件为codemirror+codemirror-minimap
+
+打包出单独的minimap
+
+删除 import CodeMirror from 'codemirror';
+将index.ts里面的CodeMirror改成 window['CodeMirror'] 
+
+此时就可以通过script标签引入独立的CodeMirror与codemirror-minimap
+
+
+
