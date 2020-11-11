@@ -7,13 +7,14 @@
 </head>
 <body>
     <textarea id="code"></textarea>
-
     <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/lib/codemirror-minimap.js"></script>
 	<link href="codemirror/lib/codemirror.css" rel="stylesheet">
 	
 	<link href="codemirror/lib/minimap.css" rel="stylesheet">
    
     <script>
+        // const tempCodeMirror = minimap(CodeMirror)
         const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
             minimap: true,
             // or minimap: { scale: 6 }

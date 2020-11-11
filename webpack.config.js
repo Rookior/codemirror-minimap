@@ -4,7 +4,7 @@ module.exports = {
   // entry: './src/index.js',
   entry: './src/index.ts',
   output: {
-    filename: 'codemirror/lib/codemirror.js',
+    filename: 'codemirror/lib/codemirror-minimap.js',
     path: path.resolve(__dirname, 'dist')
   },
      module: {

@@ -1,4 +1,4 @@
-import CodeMirror from 'codemirror';
+// import CodeMirror from 'codemirror';
 import lodash from 'lodash';
 
 export enum Constants {
@@ -467,20 +467,21 @@ class CodeMirrorMinimap {
 }
 
 
-(CodeMirror as any).defineOption('minimap', false, function (cm, display, old) {
-    if (old && old !== (CodeMirror as any).Init) {
-        if (cm.state.minimap) {
-            cm.state.minimap.destroy();
-            cm.state.minimap = null;
+
+
+
+
+    (window['CodeMirror'] as any).defineOption('minimap', false, function (cm, display, old) {
+        if (old && old !== (window['CodeMirror'] as any).Init) {
+            if (cm.state.minimap) {
+                cm.state.minimap.destroy();
+                cm.state.minimap = null;
+            }
         }
-    }
-
-    if (display) {
-        cm.state.minimap = new CodeMirrorMinimap(cm, typeof display === 'object' ? display : {});
-    }
-});
-
-
-window['CodeMirror'] = CodeMirror;
-
+    
+        if (display) {
+            cm.state.minimap = new CodeMirrorMinimap(cm, typeof display === 'object' ? display : {});
+        }
+    });
+    
 
