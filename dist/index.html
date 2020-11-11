@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="code"></textarea>
+
+    <script src="codemirror/lib/codemirror.js"></script>
+	<link href="codemirror/lib/codemirror.css" rel="stylesheet">
+	
+	<link href="codemirror/lib/minimap.css" rel="stylesheet">
+   
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+            minimap: true,
+            // or minimap: { scale: 6 }
+        });
+    </script>
+</body>
+</html>
