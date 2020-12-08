@@ -1,4 +1,4 @@
-# codemirror_demo
+# codemirror-minimap
 
 编译codemirror-minimap
 
